@@ -17,6 +17,8 @@ const RangeCounterFunctional = (props) => {
       <span className="RangeCounter__title">Functional RangeCounter</span>
       <div className="RangeCounter__controls">
         <button
+          data-test-id="decrementButton"
+          className="decrementButton"
           disabled={counter <= min}
           onClick={() => setCounter(counter - 1)}
         >
@@ -24,6 +26,8 @@ const RangeCounterFunctional = (props) => {
         </button>
         <span data-testid="counter-value">{counter}</span>
         <button
+          data-test-id="incrementButton"
+          className="incrementButton"
           disabled={counter >= max}
           onClick={() => setCounter(counter + 1)}
         >
